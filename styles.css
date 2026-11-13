@@ -430,6 +430,17 @@ blockquote {
   background: var(--gold);
 }
 
+.button-outline {
+  border-color: rgba(13, 42, 34, 0.24);
+  color: var(--forest);
+}
+
+.button-outline:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--cream);
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -1678,122 +1689,51 @@ a.contact-detail:focus-visible p:last-child {
   color: var(--gold-soft);
 }
 
-.form-card {
+.contact-card {
   position: relative;
   z-index: 1;
-  padding: clamp(1.4rem, 3vw, 2rem);
+  padding: clamp(1.6rem, 3.4vw, 2.4rem);
   border-radius: var(--radius-md);
   background: var(--paper);
   color: var(--ink);
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.16);
 }
 
-.field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-}
-
-.field {
-  margin-bottom: 0.9rem;
-}
-
-.field label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  padding: 0.78rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--cream);
-  color: var(--ink);
-  font-size: 0.83rem;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.field textarea {
-  resize: vertical;
-  min-height: 6.8rem;
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-  color: rgba(53, 82, 71, 0.55);
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  background: var(--paper);
-  border-color: var(--terracotta);
-  box-shadow: 0 0 0 3px rgba(201, 93, 61, 0.13);
-}
-
-.form-submit {
-  width: 100%;
-  margin-top: 0.25rem;
-  border: 0;
-}
-
-.form-note {
-  margin: 0.8rem 0 0;
+.contact-card-label {
+  margin-bottom: 1rem;
   font-size: 0.62rem;
-  line-height: 1.5;
-  color: rgba(53, 82, 71, 0.7);
-  text-align: center;
-}
-
-.form-note a {
-  color: var(--terracotta-dark);
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
 }
 
-.privacy-note {
-  margin: 0.75rem 0 0;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(53, 82, 71, 0.14);
-  font-size: 0.58rem;
-  line-height: 1.55;
-  color: rgba(53, 82, 71, 0.72);
+.contact-card h3 {
+  margin: 0 0 0.85rem;
+  max-width: 12ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
-.privacy-note strong {
+.contact-card > p:not(.contact-card-label) {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
   color: var(--ink-soft);
 }
 
-.privacy-note a {
-  color: var(--terracotta-dark);
-  font-weight: 700;
+.contact-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.6rem;
 }
 
-.form-status {
-  min-height: 1.1rem;
-  margin: 0.75rem 0 0;
-  font-size: 0.72rem;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.form-status.is-success {
-  color: var(--forest);
-}
-
-.form-status.is-error {
-  color: var(--terracotta-dark);
+.contact-card-actions .button {
+  flex: 1 1 10rem;
 }
 
 /* Footer */

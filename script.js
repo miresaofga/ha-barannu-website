@@ -87,13 +87,5 @@
     revealItems.forEach((item) => revealObserver.observe(item));
   }
 
-  const formStatus = document.getElementById("form-status");
-  if (new URLSearchParams(window.location.search).get("sent") === "1") {
-    formStatus.textContent =
-      "Thanks — your message has been sent. We’ll get back to you soon.";
-    formStatus.classList.add("is-success");
-    formStatus.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

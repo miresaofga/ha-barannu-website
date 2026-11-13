@@ -1761,6 +1761,24 @@ a.contact-detail:focus-visible p:last-child {
   text-underline-offset: 2px;
 }
 
+.privacy-note {
+  margin: 0.75rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(53, 82, 71, 0.14);
+  font-size: 0.58rem;
+  line-height: 1.55;
+  color: rgba(53, 82, 71, 0.72);
+}
+
+.privacy-note strong {
+  color: var(--ink-soft);
+}
+
+.privacy-note a {
+  color: var(--terracotta-dark);
+  font-weight: 700;
+}
+
 .form-status {
   min-height: 1.1rem;
   margin: 0.75rem 0 0;

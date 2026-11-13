@@ -87,23 +87,13 @@
     revealItems.forEach((item) => revealObserver.observe(item));
   }
 
-  const form = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formStatus.className = "form-status";
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    const name = new FormData(form).get("name").trim().split(/\s+/)[0];
-    formStatus.textContent = `Thanks, ${name}. This demo form is not connected yet — please email atucho8@gmail.com for a faster reply.`;
+  if (new URLSearchParams(window.location.search).get("sent") === "1") {
+    formStatus.textContent =
+      "Thanks — your message has been sent. We’ll get back to you soon.";
     formStatus.classList.add("is-success");
-    form.reset();
-  });
+    formStatus.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
 
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

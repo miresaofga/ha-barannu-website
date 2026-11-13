@@ -1736,6 +1736,24 @@ a.contact-detail:focus-visible p:last-child {
   flex: 1 1 10rem;
 }
 
+.contact-card > p.contact-privacy {
+  margin: 1.35rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(53, 82, 71, 0.14);
+  font-size: 0.6rem;
+  line-height: 1.6;
+  color: rgba(53, 82, 71, 0.72);
+}
+
+.contact-privacy strong {
+  color: var(--ink-soft);
+}
+
+.contact-privacy a {
+  color: var(--terracotta-dark);
+  font-weight: 700;
+}
+
 /* Footer */
 .site-footer {
   padding: clamp(3.5rem, 6vw, 5rem) 0 1.5rem;
